@@ -1,21 +1,20 @@
 package model;
 
-import model.enums.TipoDoc;
-import model.pessoas.Hospede;
+import model.enums.Identification;
 
 /**
  * Definição da classe Identificação para a identificação do hospede
  */
 public class Indentificacao {
   private int numero;
-  private TipoDoc tipo;
+  private Identification tipo;
 
   /**
    * Construtor da classe Identificação
    * @param numero numero da identificação
    * @param tipo tipo da identificação
    */
-  public Indentificacao(int numero, TipoDoc tipo) {
+  public Indentificacao(int numero, Identification tipo) {
     this.numero = numero;
     this.tipo = tipo;
   }
@@ -48,7 +47,7 @@ public class Indentificacao {
    * Método de modificação do tipo da identificação
    * @param tipo tipo da identificação
    */
-  public void setTipo(TipoDoc tipo) {
+  public void setTipo(Identification tipo) {
     this.tipo = tipo;
   }
 

@@ -6,7 +6,7 @@ import model.acomodacoes.Acomodado;
 import model.acomodacoes.Reserva;
 import model.acomodacoes.TipoAcomodacao;
 import model.enums.Estados;
-import model.enums.TipoDoc;
+import model.enums.Identification;
 import model.enums.TipoItens;
 import model.itensCosumo.ItensConsumo;
 import model.pessoas.Administrador;
@@ -147,8 +147,8 @@ public class Cadastros {
 
       String email = JOptionPane.showInputDialog(null, "Digite o email do hospede", title, JOptionPane.QUESTION_MESSAGE);
 
-      TipoDoc tipoDoc = (TipoDoc) JOptionPane.showInputDialog(null, "Escolha o tipo do documento do hospede", title,
-              JOptionPane.QUESTION_MESSAGE, null, TipoDoc.values(), TipoDoc.values()[0]);
+      Identification tipoDoc = (Identification) JOptionPane.showInputDialog(null, "Escolha o tipo do documento do hospede", title,
+              JOptionPane.QUESTION_MESSAGE, null, Identification.values(), Identification.values()[0]);
 
       int numDoc = Integer.parseInt(JOptionPane.showInputDialog(null, "Digite o numero do documento", title,
               JOptionPane.QUESTION_MESSAGE));

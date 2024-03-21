@@ -2,7 +2,7 @@ package model.pessoas;
 
 import model.Indentificacao;
 import model.enums.Estados;
-import model.enums.TipoDoc;
+import model.enums.Identification;
 import model.enums.TipoItens;
 import model.itensCosumo.Consumo;
 import model.itensCosumo.ItensConsumo;
@@ -51,7 +51,7 @@ public class Hospede extends Pessoa {
    * @param senha senha do hospede
    */
   public Hospede(String nome, int telefone, String cidade, Estados estado, LocalDate dataNascimento, String pais,
-                 String email, TipoDoc tipoDoc, int numDoc, String nomeMae, String nomePai, Funcionario funcionarioResponsavel, int senha){
+                 String email, Identification tipoDoc, int numDoc, String nomeMae, String nomePai, Funcionario funcionarioResponsavel, int senha){
     // Chamando o construtor da classe pai (Pessoa)
     super(nome, telefone, cidade, estado, dataNascimento, senha);
     // Inicializando os atributos específicos da classe Hospede
@@ -305,10 +305,6 @@ public class Hospede extends Pessoa {
     * @param key senha do hospede
     * @return true se a senha estiver correta, false caso contrario.
     */
-  @Override
-  protected boolean password(int key) {
-    return key == this.getKey();
-  }
 
   /**
     * Sobrescrevendo o método toString() para fornecer uma representação textual do objeto
